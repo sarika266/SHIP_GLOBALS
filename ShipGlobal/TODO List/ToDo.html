@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List with Status Navigation</title>
+    <link rel="stylesheet" href="ToDo.css">
+</head>
+<body>
+    <div class="outer-container">
+        <div class="main-container">
+            <div class="container backlog" id="backlog">
+                <h2>Backlog:-</h2>
+                <ul>
+                    <li>Jogging <button class="next" onclick="moveTask(this, 'toDo')">→</button></li>
+                    <li>Watching K-drama<button class="next" onclick="moveTask(this, 'toDo')">→</button></li>
+                    <li>Doing Leetquestions <button class="next" onclick="moveTask(this, 'toDo')">→</button></li>
+                </ul>
+            </div>
+            <div class="container todo" id="toDo">
+                <h2>To Do:-</h2>
+                <ul>
+                    <li>Shopping <button class="prev" onclick="moveTask(this, 'backlog')">←</button><button class="next" onclick="moveTask(this, 'ongoing')">→</button></li>
+                    <li>Exercise <button class="prev" onclick="moveTask(this, 'backlog')">←</button><button class="next" onclick="moveTask(this, 'ongoing')">→</button></li>
+                    <li>Pilate Classes<button class="prev" onclick="moveTask(this, 'backlog')">←</button><button class="next" onclick="moveTask(this, 'ongoing')">→</button></li>
+                </ul>
+            </div>
+            <div class="container ongoing" id="ongoing">
+                <h2>Ongoing:-</h2>
+                <ul>
+                    <li>Journal Writing <button class="prev" onclick="moveTask(this, 'toDo')">←</button><button class="next" onclick="moveTask(this, 'done')">→</button></li>
+                    <li>Travelling <button class="prev" onclick="moveTask(this, 'toDo')">←</button><button class="next" onclick="moveTask(this, 'done')">→</button></li>
+                </ul>
+            </div>
+            <div class="container done" id="done">
+                <h2>Done:-</h2>
+                <ul>
+                    <li>Cleaning <button class="prev" onclick="moveTask(this, 'ongoing')">←</button></li>
+                    <li>Grocery-Shopping <button class="prev" onclick="moveTask(this, 'ongoing')">←</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="TOdo.js"></script>
+</body>
+</html>
